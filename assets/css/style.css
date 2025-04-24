@@ -1,0 +1,147 @@
+:root {
+    --background-color: #1E1E1E;
+    --green: #6fff57;
+    --white: #fff;
+    --active: #3A375E;
+    --inctive: #3a375e80;
+    --text-back: #3a375e4d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--white);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+img {
+    position: absolute;
+    width: 100px;
+    right: 0;
+}
+
+.conteudo_principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.conteudo_principal h2 {
+    text-align: left;
+    width: 100%;
+    font-size: 3.5vh;
+    margin: 3vh;
+}
+
+.corzinha {
+    color: var(--green);
+}
+
+.botoes {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--inctive);
+    border: 3px solid var(--active);
+    border-top: none;
+    transition: all .5s;
+}
+
+.botao:first-child {
+    border-top-left-radius: 16px;
+}
+
+.botao:last-child {
+    border-top-right-radius: 16px;
+}
+
+.botao.ativo {
+    background-color: var(--active);
+    border-bottom: 3px solid var(--green);
+    transition: all .5s ease-in-out;
+}
+
+.aba-conteudo.ativo{
+    display: block;
+    transition: all .5s;
+}
+
+.aba-conteudo {
+    display: none;
+}
+.aba-princi-titulo {
+    text-align: center;
+    font-size: 1.8em;
+}
+.titulo-secundario {
+    text-align: center;
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+.abas-textos {
+    background-color: var(--text-back);
+    padding: 4vh;
+    border-radius: 0 0 16px 16px;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.contador-digito {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 100%;
+}
+
+.contador-digito p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    text-align: center;
+    margin: 0;
+}
+
+.n-contador {
+    font-size: 79px;
+}
+
+.n-texto {
+    color: var(--green);
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+}
