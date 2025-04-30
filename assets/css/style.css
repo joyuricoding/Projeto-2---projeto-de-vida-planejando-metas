@@ -5,6 +5,11 @@
     --active: #3A375E;
     --inctive: #3a375e80;
     --text-back: #3a375e4d;
+    --cor-fundo: #000000;
+    --cor-principal: #0000009e ;
+    --cor-secundaria: #272727;
+    --cor-destaque: #0a7cff;
+    --cor-texto: #ffffff;
 }
 
 * {
@@ -13,11 +18,18 @@
 }
 
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--background-color);
+    background-image: url("https://picsum.photos/1920/1080");
+    backdrop-filter: grayscale() saturate(1.5) hue-rotate(20deg) drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
     color: var(--white);
     font-family: "Chakra Petch", sans-serif;
     font-weight: 700;
     font-style: normal;
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 img {
@@ -34,6 +46,7 @@ img {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .conteudo_principal h2 {
@@ -136,6 +149,51 @@ img {
 
 .n-texto {
     color: var(--green);
+}
+
+.caixa-principal{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-principal);
+    backdrop-filter: blur(10px);
+    font-size: 1em;
+    max-width: 1200px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 8px;
+    gap: 2vh;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+h1{
+    color: var(--cor-destaque);
+}
+
+.caixa-principal button{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 8px;
+    margin: 0.5vh;
+    padding: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.caixa-principal button:hover{
+    background-color: var(--cor-destaque);
+    color: #000000;
+}
+
+.caixa-perguntas {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.caixa-alternativas, .caixa-resultado {
+    font-weight: 500;
 }
 
 
